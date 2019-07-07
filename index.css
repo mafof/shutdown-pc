@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    user-select: none;
+}
+
+input {outline:none;}
+
+#app {
+    max-width: 450px;
+}
+
+/* Блок вывода информации => */
+.timer-out {
+    display: flex;
+    width: 450px;
+    height: 100px;
+    border: 2px solid #00A86B;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-timer {
+    font-size: 64px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+/* Блок выбора времени => */
+.timers-select {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.timers-select > .button-selected {
+    border-color: #CC7722;
+}
+
+.timer-custom {
+    justify-content: center;
+}
+
+#customTime {
+    background-color: transparent;
+    text-align: center;
+}
+
+#customTime::placeholder {
+    color: #fff;
+}
+
+.timer-selected-button {
+    padding: 7px 15px 7px 15px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Блок кнопок => */
+.buttons-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#pauseBt {
+    padding-right: 10px;
+}
+
+.hide-element {
+    display: none;
+}
