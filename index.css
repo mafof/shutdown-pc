@@ -31,14 +31,24 @@ input {outline:none;}
 }
 
 /* Блок выбора времени => */
-.timers-select {
+.timers-select-section {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.timers-select > .button-selected {
+.timers-select-section > .button {
+    padding: 7px 15px 7px 15px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.timers-select-section > .button-selected {
     border-color: #CC7722;
 }
 
@@ -53,28 +63,19 @@ input {outline:none;}
 
 #customTime::placeholder {
     color: #fff;
-}
-
-.timer-selected-button {
-    padding: 7px 15px 7px 15px;
-    font-size: 18px;
-    font-family: sans-serif;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    cursor: pointer;
+    opacity: 0.5;
 }
 
 /* Блок кнопок => */
-.buttons-section {
+.buttons-control-time-section {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#pauseBt {
-    padding-right: 10px;
+.section-pause-timer > img:last-child {
+    margin-left: 10px;
 }
 
 .hide-element {

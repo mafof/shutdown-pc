@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Таймер выключения PC</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <div id="app">
-        <div class="timer-out">
+    <head>
+        <meta charset="UTF-8">
+        <title>Таймер выключения PC</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="timer-out">
             <span class="text-timer" id="timer-out-text">00:00:00</span>
-          </div>
-          
-          <div class="timers-select">
-            <span onclick="selectTime(this, 1)" class="timer-selected-button button">1 час</span>
-            <span onclick="selectTime(this, 2)" class="timer-selected-button button">2 часа</span>
-            <span onclick="selectTime(this, 3)" class="timer-selected-button button">3 часа</span>
-          </div>
-          
-          <div class="timers-select timer-custom">
-            <input class="timer-selected-button button line-break" id="customTime" type="text" placeholder="00:00:00">
-          </div>
-          
-          <div id="buttons-section" class="buttons-section">
-            <img onclick="clickButtonControlTimer(this, 'start')" id="section-start-elements" class="section-button-element" src="./img/Start.svg" alt="">
-            
-            <div class="section-pause-element hide-element" id="section-pause-elements">
-              <img onclick="clickButtonControlTimer(this, 'toggle')" class="section-button-element" src="./img/Pause.svg" alt="">
-              <img onclick="clickButtonControlTimer(this, 'stop')" class="section-button-element" src="./img/Stop.svg" alt="">
-            </div>
-          </div>
-    </div>
+        </div>
 
-    <script src="./renderer.js"></script>
-  </body>
+        <div class="timers-select-section">
+            <span onclick="selectTimeUi(this, 1)" class="button">1 час</span>
+            <span onclick="selectTimeUi(this, 2)" class="button">2 часа</span>
+            <span onclick="selectTimeUi(this, 3)" class="button">3 часа</span>
+        </div>
+
+        <div class="timers-select-section timer-custom">
+            <input onkeydown="" class="timer-selected-button button line-break" id="customTime" type="text" placeholder="00:00:00/00:00/00s">
+        </div>
+
+        <div class="buttons-control-time-section">
+            <div class="section-start-timer section-elements">
+                <img onclick="startTimerUi(this)" src="./assets/img/Start.svg" alt="">
+            </div>
+
+            <div class="section-pause-timer section-elements hide-element">
+                <img onclick="toggleTimerUi(this)" src="./assets/img/Pause.svg" alt="">
+                <img onclick="stopTimerUi(this)" src="./assets/img/Stop.svg" alt="">
+            </div>
+        </div>
+
+        <script src="./assets/js/ui/btControlTimeUi.js"></script>
+        <script src="./assets/js/ui/timerSelectUi.js"></script>
+    </body>
 </html>

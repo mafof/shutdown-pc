@@ -17,7 +17,7 @@ app.on('activate', function () {
 function init() {
     mainWindow = new BrowserWindow({
         title: 'Таймер выключения PC',
-        icon: './img/icon16.png',
+        icon: './assets/img/icon16.png',
         width: 500,
         height: 352,
         center: true,
@@ -26,17 +26,12 @@ function init() {
         autoHideMenuBar: true,
         darkTheme: true,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'assets/js/preload.js')
         }
     });
     
     mainWindow.loadFile('./index.html');
     mainWindow.on('closed', () => { mainWindow = null; })
-
-    ipcMain.on('start-button', (ev, data) => {
-        console.log('Call event -> start-button');
-    });
-
 
     ipcMain.on('clickButton', (ev, data) => {
         switch(data) {
