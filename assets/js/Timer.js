@@ -8,7 +8,7 @@ class Timer {
         this.elTimeOut = document.getElementById('timer-out-text');
     }
 
-    convertSecondsToText(seconds) {
+    convertSecondsToTextTime(seconds) {
         // Узнаем кол-во часов =>
         let hours = Math.round(seconds/3600);
         seconds = seconds - hours*3600;

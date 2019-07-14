@@ -20,7 +20,7 @@ class Application {
     
     set amountTime(seconds) {
         this.timer.amountTime = seconds;
-        this.timer.setTimeOut(this.timer.convertSecondsToText(this.amountTime));
+        this.timer.setTimeOut(this.timer.convertSecondsToTextTime(this.amountTime));
     }
 
     get state() { return this.appState; }
