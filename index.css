@@ -38,7 +38,7 @@ input {outline:none;}
     flex-wrap: wrap;
 }
 
-.timers-select-section > .button {
+.timers-select-section > .button-select-time {
     padding: 7px 15px 7px 15px;
     font-size: 18px;
     font-family: sans-serif;
@@ -50,6 +50,11 @@ input {outline:none;}
 
 .timers-select-section > .button-selected {
     border-color: #CC7722;
+}
+
+.timers-select-section > .button-select-time-inactive {
+    border-color: #fff;
+    opacity: 0.2;
 }
 
 .timer-custom {
