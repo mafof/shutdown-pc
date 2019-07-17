@@ -33,6 +33,7 @@ function selectCustomTimeUi(element) {
 
 function editCustomTimerInput(ev) {
     if(!isCurrentInputKey(ev)) return false;
+    if(document.getElementById('customTime').getAttribute('readonly') !== null) return false;
  
     let innerText = ev.srcElement.value;
     let symbol = ev.key;

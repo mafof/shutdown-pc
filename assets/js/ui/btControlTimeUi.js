@@ -9,7 +9,8 @@ function startTimerUi(element) {
     for(let el of elementsButton) {
         el.classList.add('button-select-time-inactive');
     }
-    
+    document.getElementById('customTime').setAttribute('readonly', 'readonly');
+
     app.timer.startCountDown();
 }
 
@@ -40,6 +41,7 @@ function stopTimerUi(element) {
         el.classList.remove('button-select-time-inactive');
         el.classList.remove('button-selected');
     }
+    document.getElementById('customTime').removeAttribute('readonly');
 
     app.timer.stopCountDown();
     app.timer.cleanAmountTime();

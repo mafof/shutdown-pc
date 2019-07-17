@@ -20,6 +20,7 @@ class Timer {
                 window.app.amountTime = --this.amountTime;
             } else {
                 clearInterval(this.countDown);
+                app.ipc.send('shutdown');
             }
         }, 1000);
     }
@@ -29,7 +30,6 @@ class Timer {
      */
     stopCountDown() {
         clearInterval(this.countDown);
-        this.countDown = null;
     }
 
 
@@ -55,6 +55,7 @@ class Timer {
     cleanAmountTime() {
         window.app.amountTime = 0;
         this.amountTime = null;
+        this.countDown = null;
     }
 }
 
