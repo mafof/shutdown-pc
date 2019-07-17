@@ -15,6 +15,10 @@
   "author": "mafof",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^5.0.6"
+    "electron": "^5.0.7",
+    "electron-packager": "^14.0.1"
+  },
+  "dependencies": {
+    "electron-shutdown-command": "0.0.8"
   }
 }

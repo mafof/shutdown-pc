@@ -1,6 +1,7 @@
 const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 const cp = require('child_process');
+const shutdown = require('electron-shutdown-command');
 
 let mainWindow;
 
@@ -33,17 +34,10 @@ function init() {
     mainWindow.loadFile('./index.html');
     mainWindow.on('closed', () => { mainWindow = null; })
 
-    ipcMain.on('clickButton', (ev, data) => {
-        switch(data) {
-            case "start":
-                console.log('event call -> start');
-            break;
-            case "toggle":
-                console.log('event call -> toggle');
-            break;
-            case "stop":
-                console.log('event call -> stop');
-            break;
-        }
+    ipcMain.on('shutdown', (ev, data) => {
+        shutdown.shutdown({
+            force: true,
+            quitapp: true
+        });
     });
 }
